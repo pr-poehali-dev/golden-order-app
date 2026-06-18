@@ -81,16 +81,33 @@
     font-family: "Golos Text", sans-serif;
     background-image:
       radial-gradient(
-        circle at 20% 10%,
-        hsl(40 60% 45% / 0.06),
-        transparent 40%
+        ellipse at 0% 0%,
+        hsl(175 70% 75% / 0.35),
+        transparent 50%
       ),
       radial-gradient(
-        circle at 80% 60%,
-        hsl(36 65% 35% / 0.05),
+        ellipse at 100% 0%,
+        hsl(195 85% 72% / 0.3),
         transparent 45%
-      );
+      ),
+      radial-gradient(
+        ellipse at 50% 100%,
+        hsl(140 55% 70% / 0.25),
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse at 80% 40%,
+        hsl(60 80% 78% / 0.18),
+        transparent 40%
+      ),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1' fill='hsl(175,60%,60%)' opacity='0.12'/%3E%3C/svg%3E");
     background-attachment: fixed;
+    background-size:
+      auto,
+      auto,
+      auto,
+      auto,
+      60px 60px;
   }
 
   h1,
