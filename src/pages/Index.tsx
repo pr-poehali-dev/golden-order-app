@@ -147,27 +147,22 @@ const Index = () => {
         {/* Приглушающий оверлей */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/85 pointer-events-none" />
 
-        {/* Гамак слева */}
-        <img
-          src={HERO_HAMMOCK}
-          alt=""
-          aria-hidden
-          className="pointer-events-none select-none absolute -left-8 bottom-0 w-72 md:w-[400px] object-cover rounded-tr-3xl"
-          style={{ filter: 'saturate(1.3) brightness(0.95)', opacity: 0.72, mixBlendMode: 'multiply' }}
-        />
-        {/* Гамак справа (зеркально) */}
-        <img
-          src={HERO_HAMMOCK}
-          alt=""
-          aria-hidden
-          className="pointer-events-none select-none absolute -right-8 bottom-0 w-72 md:w-[400px] object-cover rounded-tl-3xl scale-x-[-1]"
-          style={{ filter: 'saturate(1.3) brightness(0.95)', opacity: 0.65, mixBlendMode: 'multiply' }}
-        />
         <div className="container max-w-4xl text-center animate-fade-up">
-          <span className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-gold/80 gold-border rounded-full px-4 py-1.5 mb-8">
+          <span className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-gold/80 gold-border rounded-full px-4 py-1.5 mb-6">
             <Icon name="Star" size={14} className="text-gold" />
             Премиум-забота о вашем ПК
           </span>
+
+          {/* Гамак над заголовком */}
+          <div className="flex justify-center mb-7">
+            <img
+              src={HERO_HAMMOCK}
+              alt="Гамак на тропическом пляже"
+              className="w-full max-w-2xl h-52 md:h-72 object-cover rounded-3xl gold-border gold-glow"
+              style={{ filter: 'saturate(1.3) brightness(0.98)' }}
+            />
+          </div>
+
           <h1 className="font-display text-5xl md:text-8xl font-semibold leading-[1.05] mb-7">
             На вашем ПК — <br />
             <span className="gold-text animate-shimmer">идеальный порядок</span>
