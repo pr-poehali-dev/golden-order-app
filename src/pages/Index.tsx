@@ -8,9 +8,6 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-const HERO_IMG =
-  'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/fe3c665e-4537-402d-8738-16b364ac1be7.jpg';
-
 const navLinks = [
   { label: 'Главная', href: '#hero' },
   { label: 'О программе', href: '#about' },
@@ -131,59 +128,48 @@ const Index = () => {
       </header>
 
       {/* HERO */}
-      <section id="hero" className="relative pt-36 pb-24 md:pt-44 md:pb-32">
-        <div className="container grid lg:grid-cols-2 gap-14 items-center">
-          <div className="animate-fade-up">
-            <span className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-gold/80 gold-border rounded-full px-4 py-1.5 mb-7">
-              <Icon name="Star" size={14} className="text-gold" />
-              Премиум-забота о вашем ПК
-            </span>
-            <h1 className="font-display text-5xl md:text-7xl font-semibold leading-[1.05] mb-6">
-              На вашем ПК — <br />
-              <span className="gold-text animate-shimmer">идеальный порядок</span>
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-lg mb-9">
-              «Богатый курьер Pro» — элегантная программа для очистки, ускорения и защиты
-              вашего компьютера. Роскошь простоты в каждом клике.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a href="#download">
-                <Button
-                  size="lg"
-                  className="bg-gold hover:bg-gold-light text-primary-foreground font-semibold rounded-full px-8 h-14 text-base gold-glow"
-                >
-                  <Icon name="Download" size={20} className="mr-2" />
-                  Скачать бесплатно
-                </Button>
-              </a>
-              <a href="#about">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="rounded-full px-8 h-14 text-base border-gold/40 text-gold hover:bg-gold/10 hover:text-gold-light"
-                >
-                  Узнать больше
-                </Button>
-              </a>
-            </div>
-
-            <div className="flex gap-10 mt-12">
-              {stats.map((s) => (
-                <div key={s.label}>
-                  <p className="font-display text-3xl font-semibold gold-text">{s.value}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{s.label}</p>
-                </div>
-              ))}
-            </div>
+      <section id="hero" className="relative pt-40 pb-24 md:pt-52 md:pb-32">
+        <div className="container max-w-4xl text-center animate-fade-up">
+          <span className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-gold/80 gold-border rounded-full px-4 py-1.5 mb-8">
+            <Icon name="Star" size={14} className="text-gold" />
+            Премиум-забота о вашем ПК
+          </span>
+          <h1 className="font-display text-5xl md:text-8xl font-semibold leading-[1.05] mb-7">
+            На вашем ПК — <br />
+            <span className="gold-text animate-shimmer">идеальный порядок</span>
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-10">
+            «Богатый курьер Pro» — элегантная программа для очистки, ускорения и защиты
+            вашего компьютера. Роскошь простоты в каждом клике.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <a href="#download">
+              <Button
+                size="lg"
+                className="bg-gold hover:bg-gold-light text-primary-foreground font-semibold rounded-full px-8 h-14 text-base gold-glow"
+              >
+                <Icon name="Download" size={20} className="mr-2" />
+                Скачать бесплатно
+              </Button>
+            </a>
+            <a href="#about">
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full px-8 h-14 text-base border-gold/40 text-gold hover:bg-gold/10 hover:text-gold-deep"
+              >
+                Узнать больше
+              </Button>
+            </a>
           </div>
 
-          <div className="relative animate-float">
-            <div className="absolute -inset-6 bg-gold/10 blur-3xl rounded-full" />
-            <img
-              src={HERO_IMG}
-              alt="Интерфейс программы Богатый курьер Pro"
-              className="relative rounded-2xl gold-border gold-glow w-full"
-            />
+          <div className="flex gap-10 md:gap-16 mt-14 justify-center">
+            {stats.map((s) => (
+              <div key={s.label}>
+                <p className="font-display text-3xl md:text-4xl font-semibold gold-text">{s.value}</p>
+                <p className="text-xs text-muted-foreground mt-1">{s.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
