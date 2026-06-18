@@ -9,6 +9,7 @@ import {
 } from '@/components/ui/accordion';
 
 const HERO_HAMMOCK = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/f9a128fd-e2f0-4266-bb4c-5e401416c2e2.jpg';
+const LOGO_IMG = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/3b073770-8d6a-4d67-be37-66dd7c2a7025.jpg';
 const HAMMOCK_IMG = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/61e1332c-b160-46eb-9abd-32ff9073bf12.jpg';
 const MALDIVES_BG = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/491f8533-2a88-424c-9db1-63d5716dcbb8.jpg';
 
@@ -78,9 +79,11 @@ const Index = () => {
       <header className="fixed top-0 inset-x-0 z-50 glass">
         <nav className="container flex items-center justify-between h-20">
           <a href="#hero" className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-full gold-border gold-glow flex items-center justify-center bg-secondary">
-              <Icon name="Crown" className="text-gold" size={22} />
-            </div>
+            <img
+              src={LOGO_IMG}
+              alt="Богатый курьер Pro"
+              className="w-11 h-11 rounded-full gold-border gold-glow object-cover"
+            />
             <div className="leading-tight">
               <p className="font-display text-xl font-semibold gold-text">Богатый курьер</p>
               <p className="text-[11px] tracking-[0.3em] text-gold/70 uppercase">Pro</p>
@@ -350,9 +353,11 @@ const Index = () => {
       <footer className="border-t border-gold/10 py-12">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full gold-border flex items-center justify-center bg-secondary">
-              <Icon name="Crown" className="text-gold" size={18} />
-            </div>
+            <img
+              src={LOGO_IMG}
+              alt="Богатый курьер Pro"
+              className="w-10 h-10 rounded-full gold-border object-cover"
+            />
             <p className="font-display text-lg gold-text">Богатый курьер Pro</p>
           </div>
           <div className="flex flex-col items-center gap-3">
