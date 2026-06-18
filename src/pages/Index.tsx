@@ -8,8 +8,8 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-const PALM_LEFT = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/d3242f05-4239-4b25-9aaf-c6497aa0e705.jpg';
-const PALM_LEAVES = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/1d362280-9c94-4a0e-badc-2ec366ba327f.jpg';
+const PALM_LEFT = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/0653795c-d61c-4fc9-94e8-2302636e68ed.jpg';
+const PALM_LEAVES = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/16a90a45-4108-42d1-802c-072a6253d38f.jpg';
 const HAMMOCK_IMG = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/61e1332c-b160-46eb-9abd-32ff9073bf12.jpg';
 const MALDIVES_BG = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/491f8533-2a88-424c-9db1-63d5716dcbb8.jpg';
 
