@@ -351,9 +351,24 @@ const Index = () => {
             </div>
             <p className="font-display text-lg gold-text">Богатый курьер Pro</p>
           </div>
-          <p className="text-sm text-muted-foreground">
-            © 2026 Богатый курьер Pro. Все права защищены.
-          </p>
+          <div className="flex flex-col items-center gap-3">
+            <p className="text-sm text-muted-foreground">
+              © 2026 Богатый курьер Pro. Все права защищены.
+            </p>
+            <a
+              href="https://tips.yandex.ru/guest/payment/5485470"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                className="rounded-full border-gold/40 text-gold hover:bg-gold/10 hover:text-gold-deep gap-2 px-5"
+              >
+                <Icon name="Heart" size={16} className="text-gold" />
+                Оставить чаевые
+              </Button>
+            </a>
+          </div>
           <div className="flex gap-4">
             {['Youtube', 'Send', 'MessageCircle'].map((ic) => (
               <a
