@@ -129,16 +129,20 @@ const Index = () => {
 
       {/* HERO */}
       <section id="hero" className="relative pt-40 pb-24 md:pt-52 md:pb-32 overflow-hidden">
-        {/* Фон Мальдив */}
-        <img
-          src={MALDIVES_BG}
-          alt=""
+        {/* Живое видео — море Мальдив */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           aria-hidden
           className="pointer-events-none select-none absolute inset-0 w-full h-full object-cover object-center"
-          style={{ opacity: 0.13, filter: 'saturate(1.6) brightness(1.1)' }}
-        />
-        {/* Лёгкий белый оверлей поверх фото */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/80 pointer-events-none" />
+          style={{ opacity: 0.18, filter: 'saturate(1.4) brightness(0.95)' }}
+        >
+          <source src="https://cdn.pixabay.com/video/2019/08/30/26553-357296155_large.mp4" type="video/mp4" />
+        </video>
+        {/* Приглушающий оверлей */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/85 pointer-events-none" />
 
         {/* Пальма слева */}
         <img
