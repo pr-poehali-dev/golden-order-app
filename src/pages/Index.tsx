@@ -8,6 +8,10 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
+const PALM_LEFT = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/4b8bd9ee-1b87-4297-8a34-09329cd421f4.jpg';
+const PALM_LEAVES = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/3acc423d-bcbe-400b-9697-0a5a2cce0eae.jpg';
+const HAMMOCK_IMG = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/61e1332c-b160-46eb-9abd-32ff9073bf12.jpg';
+
 const navLinks = [
   { label: 'Главная', href: '#hero' },
   { label: 'О программе', href: '#about' },
@@ -128,7 +132,23 @@ const Index = () => {
       </header>
 
       {/* HERO */}
-      <section id="hero" className="relative pt-40 pb-24 md:pt-52 md:pb-32">
+      <section id="hero" className="relative pt-40 pb-24 md:pt-52 md:pb-32 overflow-hidden">
+        {/* Пальма слева */}
+        <img
+          src={PALM_LEFT}
+          alt=""
+          aria-hidden
+          className="pointer-events-none select-none absolute -left-16 top-0 w-72 md:w-96 opacity-40 object-cover"
+          style={{ mixBlendMode: 'multiply' }}
+        />
+        {/* Листья справа */}
+        <img
+          src={PALM_LEAVES}
+          alt=""
+          aria-hidden
+          className="pointer-events-none select-none absolute -right-12 -top-8 w-72 md:w-96 opacity-35 object-cover scale-x-[-1]"
+          style={{ mixBlendMode: 'multiply' }}
+        />
         <div className="container max-w-4xl text-center animate-fade-up">
           <span className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-gold/80 gold-border rounded-full px-4 py-1.5 mb-8">
             <Icon name="Star" size={14} className="text-gold" />
@@ -171,6 +191,24 @@ const Index = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* HAMMOCK BANNER */}
+      <section className="relative h-64 md:h-80 overflow-hidden">
+        <img
+          src={HAMMOCK_IMG}
+          alt="Гамак на тропическом пляже"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background/80" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+          <p className="font-display text-3xl md:text-5xl font-semibold text-white drop-shadow-lg">
+            Отдыхайте, пока программа работает
+          </p>
+          <p className="text-white/80 mt-3 text-base drop-shadow">
+            «Богатый курьер Pro» всё сделает за вас — как верный курьер
+          </p>
         </div>
       </section>
 
