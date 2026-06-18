@@ -195,19 +195,24 @@ const Index = () => {
       </section>
 
       {/* HAMMOCK BANNER */}
-      <section className="relative h-64 md:h-80 overflow-hidden">
+      <section className="relative h-[420px] md:h-[520px] overflow-hidden">
         <img
           src={HAMMOCK_IMG}
           alt="Гамак на тропическом пляже"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center scale-105"
+          style={{ filter: 'brightness(0.88) saturate(1.2)' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background/80" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-          <p className="font-display text-3xl md:text-5xl font-semibold text-white drop-shadow-lg">
-            Отдыхайте, пока программа работает
+        {/* тонкий градиент только по краям, центр открыт */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/30" />
+        <div className="absolute inset-x-0 bottom-0 flex flex-col items-center pb-12 px-4 text-center">
+          <span className="inline-block text-xs tracking-[0.3em] uppercase text-gold/90 gold-border rounded-full px-4 py-1 mb-4 backdrop-blur-sm bg-black/20">
+            ✦ Философия продукта
+          </span>
+          <p className="font-display text-4xl md:text-6xl font-semibold text-white drop-shadow-xl leading-tight max-w-3xl">
+            Отдыхайте — <span className="gold-text">мы всё сделаем</span>
           </p>
-          <p className="text-white/80 mt-3 text-base drop-shadow">
-            «Богатый курьер Pro» всё сделает за вас — как верный курьер
+          <p className="text-white/75 mt-4 text-base md:text-lg drop-shadow max-w-lg">
+            Пока вы качаетесь в гамаке, «Богатый курьер Pro» наводит порядок на вашем ПК
           </p>
         </div>
       </section>
