@@ -8,9 +8,10 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-const PALM_LEFT = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/4b8bd9ee-1b87-4297-8a34-09329cd421f4.jpg';
-const PALM_LEAVES = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/3acc423d-bcbe-400b-9697-0a5a2cce0eae.jpg';
+const PALM_LEFT = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/d3242f05-4239-4b25-9aaf-c6497aa0e705.jpg';
+const PALM_LEAVES = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/1d362280-9c94-4a0e-badc-2ec366ba327f.jpg';
 const HAMMOCK_IMG = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/61e1332c-b160-46eb-9abd-32ff9073bf12.jpg';
+const MALDIVES_BG = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/491f8533-2a88-424c-9db1-63d5716dcbb8.jpg';
 
 const navLinks = [
   { label: 'Главная', href: '#hero' },
@@ -128,21 +129,32 @@ const Index = () => {
 
       {/* HERO */}
       <section id="hero" className="relative pt-40 pb-24 md:pt-52 md:pb-32 overflow-hidden">
+        {/* Фон Мальдив */}
+        <img
+          src={MALDIVES_BG}
+          alt=""
+          aria-hidden
+          className="pointer-events-none select-none absolute inset-0 w-full h-full object-cover object-center"
+          style={{ opacity: 0.13, filter: 'saturate(1.6) brightness(1.1)' }}
+        />
+        {/* Лёгкий белый оверлей поверх фото */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/80 pointer-events-none" />
+
         {/* Пальма слева */}
         <img
           src={PALM_LEFT}
           alt=""
           aria-hidden
-          className="pointer-events-none select-none absolute -left-16 top-0 w-72 md:w-96 opacity-40 object-cover"
-          style={{ mixBlendMode: 'multiply' }}
+          className="pointer-events-none select-none absolute -left-10 -top-4 w-80 md:w-[420px]"
+          style={{ filter: 'saturate(1.8) brightness(1.05)', opacity: 0.82, mixBlendMode: 'multiply' }}
         />
         {/* Листья справа */}
         <img
           src={PALM_LEAVES}
           alt=""
           aria-hidden
-          className="pointer-events-none select-none absolute -right-12 -top-8 w-72 md:w-96 opacity-35 object-cover scale-x-[-1]"
-          style={{ mixBlendMode: 'multiply' }}
+          className="pointer-events-none select-none absolute -right-10 -top-6 w-80 md:w-[420px] scale-x-[-1]"
+          style={{ filter: 'saturate(1.8) brightness(1.05)', opacity: 0.78, mixBlendMode: 'multiply' }}
         />
         <div className="container max-w-4xl text-center animate-fade-up">
           <span className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-gold/80 gold-border rounded-full px-4 py-1.5 mb-8">
