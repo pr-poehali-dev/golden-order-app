@@ -129,18 +129,19 @@ const Index = () => {
 
       {/* HERO */}
       <section id="hero" className="relative pt-40 pb-24 md:pt-52 md:pb-32 overflow-hidden">
-        {/* Живое видео — море Мальдив */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
+        {/* Живое видео — море Мальдив через YouTube */}
+        <div
           aria-hidden
-          className="pointer-events-none select-none absolute inset-0 w-full h-full object-cover object-center"
-          style={{ opacity: 0.18, filter: 'saturate(1.4) brightness(0.95)' }}
+          className="pointer-events-none select-none absolute inset-0 overflow-hidden"
+          style={{ opacity: 0.22, filter: 'saturate(1.5) brightness(0.9)' }}
         >
-          <source src="https://cdn.pixabay.com/video/2019/08/30/26553-357296155_large.mp4" type="video/mp4" />
-        </video>
+          <iframe
+            src="https://www.youtube.com/embed/qLndSF_NzpA?autoplay=1&mute=1&loop=1&playlist=qLndSF_NzpA&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&start=5"
+            allow="autoplay; encrypted-media"
+            className="absolute w-[300%] h-[300%] -top-[100%] -left-[100%] border-0"
+            title=""
+          />
+        </div>
         {/* Приглушающий оверлей */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/85 pointer-events-none" />
 
