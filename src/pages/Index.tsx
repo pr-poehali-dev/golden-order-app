@@ -8,8 +8,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-const PALM_LEFT = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/0653795c-d61c-4fc9-94e8-2302636e68ed.jpg';
-const PALM_LEAVES = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/16a90a45-4108-42d1-802c-072a6253d38f.jpg';
+const HERO_HAMMOCK = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/f9a128fd-e2f0-4266-bb4c-5e401416c2e2.jpg';
 const HAMMOCK_IMG = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/61e1332c-b160-46eb-9abd-32ff9073bf12.jpg';
 const MALDIVES_BG = 'https://cdn.poehali.dev/projects/6c9a72c3-ca95-43b0-ade7-e80fe2261f26/files/491f8533-2a88-424c-9db1-63d5716dcbb8.jpg';
 
@@ -145,21 +144,21 @@ const Index = () => {
         {/* Приглушающий оверлей */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/85 pointer-events-none" />
 
-        {/* Пальма слева */}
+        {/* Гамак слева */}
         <img
-          src={PALM_LEFT}
+          src={HERO_HAMMOCK}
           alt=""
           aria-hidden
-          className="pointer-events-none select-none absolute -left-10 -top-4 w-80 md:w-[420px]"
-          style={{ filter: 'saturate(1.8) brightness(1.05)', opacity: 0.82, mixBlendMode: 'multiply' }}
+          className="pointer-events-none select-none absolute -left-8 bottom-0 w-72 md:w-[400px] object-cover rounded-tr-3xl"
+          style={{ filter: 'saturate(1.3) brightness(0.95)', opacity: 0.72, mixBlendMode: 'multiply' }}
         />
-        {/* Листья справа */}
+        {/* Гамак справа (зеркально) */}
         <img
-          src={PALM_LEAVES}
+          src={HERO_HAMMOCK}
           alt=""
           aria-hidden
-          className="pointer-events-none select-none absolute -right-10 -top-6 w-80 md:w-[420px] scale-x-[-1]"
-          style={{ filter: 'saturate(1.8) brightness(1.05)', opacity: 0.78, mixBlendMode: 'multiply' }}
+          className="pointer-events-none select-none absolute -right-8 bottom-0 w-72 md:w-[400px] object-cover rounded-tl-3xl scale-x-[-1]"
+          style={{ filter: 'saturate(1.3) brightness(0.95)', opacity: 0.65, mixBlendMode: 'multiply' }}
         />
         <div className="container max-w-4xl text-center animate-fade-up">
           <span className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-gold/80 gold-border rounded-full px-4 py-1.5 mb-8">
