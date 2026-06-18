@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+			"./1781804661131075753.html"
 	],
 	prefix: "",
 	theme: {
@@ -18,7 +19,16 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				display: ['Cormorant Garamond', 'serif'],
+				sans: ['Golos Text', 'sans-serif']
+			},
 			colors: {
+				gold: {
+					DEFAULT: 'hsl(var(--gold))',
+					light: 'hsl(var(--gold-light))',
+					deep: 'hsl(var(--gold-deep))'
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
