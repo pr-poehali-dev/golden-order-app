@@ -43,11 +43,6 @@ const features = [
   },
 ];
 
-const stats = [
-  { value: '120K+', label: 'Довольных пользователей' },
-  { value: '4.9★', label: 'Средняя оценка' },
-  { value: '18 ГБ', label: 'Средне освобождается' },
-];
 
 const faqItems = [
   {
@@ -183,14 +178,7 @@ const Index = () => {
             </a>
           </div>
 
-          <div className="flex gap-10 md:gap-16 mt-14 justify-center">
-            {stats.map((s) => (
-              <div key={s.label}>
-                <p className="font-display text-3xl md:text-4xl font-semibold gold-text">{s.value}</p>
-                <p className="text-xs text-muted-foreground mt-1">{s.label}</p>
-              </div>
-            ))}
-          </div>
+
         </div>
       </section>
 
